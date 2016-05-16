@@ -1,0 +1,7 @@
+# We use SASS, so don't store the output CSS files or cache
+*.css
+*.css.map
+.sass-cache
+
+# Ignore any vim swap files
+*.sw*
