@@ -1,0 +1,271 @@
+@charset "UTF-8";
+/*!*
+Theme Name: Falcon 633
+Theme URI: https://falkus.co
+Author: Martin Falkus
+Author URI: https://falkus.co
+Description: A mobile first, clear, simple blog theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+*/
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+
+/*------------------------------------*\
+    IMPORTS AND SETUP
+\*------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import "css/vars";
+@import "css/inuit.css/inuit";
+
+/*------------------------------------*\
+    GENERAL
+\*------------------------------------*/
+* {
+    color: #333;
+}
+a {
+    color: $purple;
+    font-weight: bold;
+    &:hover {
+        color: #000;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $brand-face;
+    line-height: 110%;
+    margin-bottom: 16px;
+}
+/* a */.falcon {
+    text-decoration: none;
+    padding: 24px;
+    display: inline-block;
+    h1 {
+        color: #FFF;
+    }
+    em {
+        font-style: normal;
+        color: $purple;
+    }
+}
+ul {
+    margin-left: 17px;
+    list-style-position: outside;
+}
+code, pre {
+    font-size: 90%;
+    background-color: #D4F3FF;
+    border-radius: 4px;
+}
+pre {
+    padding: 8px 12px;
+}
+code {
+    padding: 2px 4px;
+}
+img {
+    max-width: 100%;
+}
+/* hr */.rule {
+    margin-bottom: $base-line-height;
+}
+
+/*------------------------------------*\
+    CONTAINERS
+\*------------------------------------*/
+.site-content {
+    width: 100%;
+    max-width: $max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+.meta-row {
+    padding-top: 12px;
+}
+@media (max-width: $desk-start) {
+    .one-half {
+        width: 100%;
+    }
+    .site-content {
+        padding: 0 2%;
+    }
+}
+
+
+/*------------------------------------*\
+    INDENTS
+\*------------------------------------*/
+.lower-indent {
+    /* Checkout: http://bennettfeely.com/clippy/ */
+    $indent: 70%; // 100% is no indent
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 0);
+    padding-bottom: 30px;
+}
+
+/*------------------------------------*\
+    HEADER FOOTER
+\*------------------------------------*/
+.header-wrapper {
+    background: $green;
+    width: 100%;
+    margin-bottom: $base-line-height;
+    .grid__item {
+        vertical-align: baseline;
+    }
+
+    @extend .lower-indent;
+}
+
+.footer-wrapper {
+    background: #eeeeee;
+    text-align: center;
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/*------------------------------------*\
+    NAVIGATION
+\*------------------------------------*/
+.nav--top {
+    li {
+        font-size: 15px;
+        margin: 0 18px;
+        text-transform: uppercase;
+        &:hover, &.current-menu-item, &.current_page_parent {
+            font-weight: bold;
+        }
+        a {
+            padding: 20px 8px 0;
+            text-decoration: none;
+            color: #FFF;
+            font-weight: normal;
+        }
+        font-family: $brand-face;
+    }
+}
+
+.nav--primary {
+    text-align: right;
+}
+.nav--primary li {
+    margin-right: 0;
+}
+.nav--external li {
+    margin-left: 0;
+}
+
+
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
