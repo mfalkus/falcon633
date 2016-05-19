@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* a */.falcon {
     text-decoration: none;
-    padding: 24px;
+    padding: 4px;
     display: inline-block;
     h1 {
         color: #FFF;
@@ -58,6 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* a */.falcon--dark h1 {
     color: $green;
+}
+.falcon--primary {
+    padding: 24px;
 }
 
 ul {
@@ -172,6 +175,13 @@ $indent: 100%; // 100% is no indent
         font-size: 24px;
     }
     padding: 30px 0 60px;
+    p {
+        color: #909090;
+    }
+}
+// Logo and footer menu
+.footer-top {
+    margin-bottom: 35px;
 }
 
 /*------------------------------------*\
@@ -186,7 +196,7 @@ $indent: 100%; // 100% is no indent
             font-weight: bold;
         }
         a {
-            padding: 20px 8px 0;
+            padding: 0 8px;
             text-decoration: none;
             font-weight: normal;
         }
@@ -194,6 +204,7 @@ $indent: 100%; // 100% is no indent
     }
 }
 .nav--top li a {
+    padding-top: 20px;
     color: #FFF;
 }
 

@@ -28,7 +28,7 @@
             ) ); ?>
         </div><!--
      --><div class="grid__item one-fifth falkusco-wrapper">
-			<a class="falcon" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<a class="falcon falcon--primary" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             <h1>Falkus<em>.co</em></h1>
             </a>
         </div><!--
