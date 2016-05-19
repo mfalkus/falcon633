@@ -17,13 +17,16 @@ Tags:
 /*------------------------------------*\
     IMPORTS AND SETUP
 \*------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,400,700);
 @import "css/vars";
 @import "css/inuit.css/inuit";
 
 /*------------------------------------*\
     GENERAL
 \*------------------------------------*/
+html, body {
+    background: #eeeeee;
+}
 * {
     color: #333;
 }
@@ -45,12 +48,18 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     h1 {
         color: #FFF;
+        font-size: 43px;
+        letter-spacing: 1px;
     }
     em {
         font-style: normal;
         color: $purple;
     }
 }
+/* a */.falcon--dark h1 {
+    color: $green;
+}
+
 ul {
     margin-left: 17px;
     list-style-position: outside;
@@ -71,6 +80,8 @@ img {
 }
 /* hr */.rule {
     margin-bottom: $base-line-height;
+    color: #dbdada;
+    background-color: #dbdada;
 }
 
 /*------------------------------------*\
@@ -95,15 +106,45 @@ img {
     }
 }
 
+.content-wrapper {
+    background: #FFF;
+}
+.content-wrapper--highlight {
+    background: $purple;
+    * {
+        color: #FFF;
+    }
+}
+.content-prep {
+    max-width: $max-content;
+    margin: 0 auto;
+}
+.top-indent.content-wrapper {
+    padding-top: 50px;
+}
+
 
 /*------------------------------------*\
     INDENTS
 \*------------------------------------*/
+$top-indent: 0%;
+$indent: 100%; // 100% is no indent
 .lower-indent {
     /* Checkout: http://bennettfeely.com/clippy/ */
-    $indent: 70%; // 100% is no indent
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 0);
     clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 0);
+    padding-bottom: 30px;
+}
+
+.top-indent {
+    -webkit-clip-path: polygon(50% 0, 100% $top-indent, 100% 100%, 50% 100%, 0 100%, 0 $top-indent);
+    clip-path: polygon(50% 0, 100% $top-indent, 100% 100%, 50% 100%, 0 100%, 0 $top-indent);
+}
+
+.both-indent {
+    -webkit-clip-path: polygon(50% 0%, 100% $top-indent, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 $top-indent);
+    clip-path: polygon(50% 0%, 100% $top-indent, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 $top-indent);
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -113,12 +154,15 @@ img {
 .header-wrapper {
     background: $green;
     width: 100%;
-    margin-bottom: $base-line-height;
+    margin-bottom: 0; // not required due to point and padding;
     .grid__item {
         vertical-align: baseline;
     }
 
     @extend .lower-indent;
+}
+.falkusco-wrapper {
+    text-align: center;
 }
 
 .footer-wrapper {
@@ -127,12 +171,13 @@ img {
     h1 {
         font-size: 24px;
     }
+    padding: 30px 0 60px;
 }
 
 /*------------------------------------*\
     NAVIGATION
 \*------------------------------------*/
-.nav--top {
+.nav--main {
     li {
         font-size: 15px;
         margin: 0 18px;
@@ -143,11 +188,13 @@ img {
         a {
             padding: 20px 8px 0;
             text-decoration: none;
-            color: #FFF;
             font-weight: normal;
         }
         font-family: $brand-face;
     }
+}
+.nav--top li a {
+    color: #FFF;
 }
 
 .nav--primary {
@@ -160,6 +207,25 @@ img {
     margin-left: 0;
 }
 
+
+/*------------------------------------*\
+    HEADINGS
+\*------------------------------------*/
+.section-header {
+    text-align: center;
+    h2 {
+        margin-bottom: 10px;
+        color: $green;
+    }
+}
+.subtitle {
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #7e7e7e;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
 
 
 /*------------------------------------*\
