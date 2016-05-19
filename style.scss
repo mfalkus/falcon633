@@ -86,6 +86,12 @@ img {
     color: #dbdada;
     background-color: #dbdada;
 }
+/* p */.lead {
+    font-family: $brand-face;
+    font-size: 21px;
+    line-height: 150%;
+    font-weight: 200;
+}
 
 /*------------------------------------*\
     CONTAINERS
@@ -189,23 +195,27 @@ $indent: 100%; // 100% is no indent
 \*------------------------------------*/
 .nav--main {
     li {
-        font-size: 15px;
-        margin: 0 18px;
+        font-size: 14px;
+        margin: 0 8px;
         text-transform: uppercase;
         &:hover, &.current-menu-item, &.current_page_parent {
             font-weight: bold;
         }
         a {
-            padding: 0 8px;
+            padding: 0 4px;
             text-decoration: none;
             font-weight: normal;
         }
         font-family: $brand-face;
     }
 }
-.nav--top li a {
-    padding-top: 20px;
-    color: #FFF;
+.nav--top li {
+    font-size: 15px;
+    margin: 0 18px;
+    a {
+        padding-top: 20px 8px 0;
+        color: #FFF;
+    }
 }
 
 .nav--primary {
@@ -216,6 +226,21 @@ $indent: 100%; // 100% is no indent
 }
 .nav--external li {
     margin-left: 0;
+}
+
+
+/*------------------------------------*\
+    BUTTONS
+\*------------------------------------*/
+.btn {
+    border: 1px $green solid;
+    color: $green;
+    text-transform: uppercase;
+    font-family: $brand-face;
+    &:hover {
+        background: $green;
+        color: #FFF;
+    }
 }
 
 
