@@ -29,21 +29,21 @@ html, body {
 }
 * {
     color: #333;
+    font-family: $brand-face;
 }
 a {
     color: $purple;
     font-weight: bold;
+    text-decoration: none;
     &:hover {
         color: #000;
     }
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: $brand-face;
     line-height: 110%;
     margin-bottom: 16px;
 }
 /* a */.falcon {
-    text-decoration: none;
     padding: 4px;
     display: inline-block;
     h1 {
@@ -86,8 +86,11 @@ img {
     color: #dbdada;
     background-color: #dbdada;
 }
+.post-splitter {
+    border-top: 1px solid #dbdada;
+    padding-top: 25px;
+}
 /* p */.lead {
-    font-family: $brand-face;
     font-size: 21px;
     line-height: 150%;
     font-weight: 200;
@@ -203,10 +206,8 @@ $indent: 100%; // 100% is no indent
         }
         a {
             padding: 0 4px;
-            text-decoration: none;
             font-weight: normal;
         }
-        font-family: $brand-face;
     }
 }
 .nav--top li {
@@ -236,7 +237,6 @@ $indent: 100%; // 100% is no indent
     border: 1px $green solid;
     color: $green;
     text-transform: uppercase;
-    font-family: $brand-face;
     &:hover {
         background: $green;
         color: #FFF;
@@ -261,6 +261,11 @@ $indent: 100%; // 100% is no indent
     font-size: 16px;
     letter-spacing: 2px;
     margin-bottom: 30px;
+}
+.date {
+    font-weight: bold;
+    font-size: 16px;
+    color: $green;
 }
 
 

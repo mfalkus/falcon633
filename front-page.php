@@ -23,19 +23,26 @@ get_header(); ?>
                 'post_status'   => 'publish',
             ));
 
+            $first = 1;
             foreach ( $recent_posts as $post ) : setup_postdata( $post );
         ?>
-            <div class="grid">
-            <div class="grid__item one-tenth">
-                <?php the_date(); ?>
+            <div class="grid <?php if (!$first) { echo 'post-splitter'; } ?>">
+            <div class="grid__item one-fifth">
+                <span class="date"><?php
+                    $date = the_date('d M Y', '', '', FALSE);
+                    echo $date;
+                ?>
+                </span>
             </div><!--
-         --><div class="grid__item nine-tenths">
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+         --><div class="grid__item four-fifths">
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
             </div>
             </div>
+        <?php $first = 0; ?>
         <?php endforeach; 
-        wp_reset_postdata();?>
+        wp_reset_postdata();
+        ?>
         </div>
         </div>
     </div>

@@ -126,3 +126,9 @@ function falcon_pagination() {
         ) )
         . '</div>';
 }
+
+/* Use a shorter than normal excerpt length */
+function custom_excerpt_length( $length ) {
+    return 40;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 100);
