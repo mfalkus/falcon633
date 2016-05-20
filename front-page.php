@@ -27,14 +27,14 @@ get_header(); ?>
             foreach ( $recent_posts as $post ) : setup_postdata( $post );
         ?>
             <div class="grid <?php if (!$first) { echo 'post-splitter'; } ?>">
-            <div class="grid__item one-fifth">
+            <div class="grid__item date-col">
                 <span class="date"><?php
                     $date = the_date('d M Y', '', '', FALSE);
-                    echo $date;
+                    echo str_replace(' ', '<br />', $date);
                 ?>
                 </span>
             </div><!--
-         --><div class="grid__item four-fifths">
+         --><div class="grid__item post-col">
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
             </div>

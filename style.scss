@@ -135,6 +135,13 @@ img {
     padding-top: 50px;
 }
 
+.date-col {
+    width: 15%;
+}
+.post-col {
+    width: 85%;
+}
+
 
 /*------------------------------------*\
     INDENTS
@@ -227,6 +234,17 @@ $indent: 100%; // 100% is no indent
 }
 .nav--external li {
     margin-left: 0;
+}
+
+
+/*------------------------------------*\
+    PAGINATION
+\*------------------------------------*/
+.falcon-pagination-wrapper {
+    @extend .post-splitter;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 20px;
 }
 
 
