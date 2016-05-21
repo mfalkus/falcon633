@@ -14,21 +14,16 @@ get_header(); ?>
 <div class="both-indent content-wrapper">
     <div class="content-prep">
         <div class="grid">
-        <div class="grid__item one-whole">
+        <div class="grid__item one-whole post-list">
 
-        <main class="main-site" role="main">
-
-        <?php $first = 1; ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <?php get_template_part(
                 'content-templates/content',
-                get_post_format() ? : 'standard'
+                get_post_format()
             ); ?>
-        <?php $first = 0; ?>
         <?php endwhile; ?>
 
         <?php echo falcon_pagination() ?>
-        </main>
 
         </div>
         </div>

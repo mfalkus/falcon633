@@ -15,7 +15,7 @@ get_header(); ?>
 <div class="both-indent content-wrapper">
     <div class="content-prep">
         <div class="grid">
-        <div class="grid__item one-whole">
+        <div class="grid__item one-whole post-list">
         <?php
             $recent_posts = get_posts(array(
                 'numberposts'   => 5,
@@ -23,25 +23,10 @@ get_header(); ?>
                 'post_status'   => 'publish',
             ));
 
-            $first = 1;
             foreach ( $recent_posts as $post ) : setup_postdata( $post );
-        ?>
-            <div class="grid <?php if (!$first) { echo 'post-splitter'; } ?>">
-            <div class="grid__item date-col">
-                <span class="date"><?php
-                    $date = the_date('d M Y', '', '', FALSE);
-                    echo str_replace(' ', '<br />', $date);
-                ?>
-                </span>
-            </div><!--
-         --><div class="grid__item post-col">
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <?php the_excerpt(); ?>
-            </div>
-            </div>
-        <?php $first = 0; ?>
-        <?php endforeach; 
-        wp_reset_postdata();
+                get_template_part( 'content-templates/content' );
+            endforeach;
+            wp_reset_postdata();
         ?>
         </div>
         </div>

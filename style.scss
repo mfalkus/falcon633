@@ -86,9 +86,12 @@ img {
     color: #dbdada;
     background-color: #dbdada;
 }
-.post-splitter {
-    border-top: 1px solid #dbdada;
-    padding-top: 25px;
+.post-list {
+    // unlikely to get loads of pre IE9 visitors
+    .post-splitter:not(:first-child) {
+        border-top: 1px solid #dbdada;
+        padding-top: 25px;
+    }
 }
 /* p */.lead {
     font-size: 21px;
