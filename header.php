@@ -19,25 +19,23 @@
 
 <div class="total-wrapper">
 	<header class="header-wrapper" role="banner">
-        <div class="grid">
-        <div class="grid__item two-fifths primary-wrapper">
+        <div class="menu-wrapper">
             <?php wp_nav_menu( array(
-                'container_class'   => 'menu-header',
+                'container'         => false,
                 'menu_class'        => 'nav nav--main nav--top nav--primary',
                 'theme_location'    => 'primary_nav'
             ) ); ?>
-        </div><!--
-     --><div class="grid__item one-fifth falkusco-wrapper">
 			<a class="falcon falcon--primary" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-            <h1>Falkus<em>.co</em></h1>
+                <h1>Falkus<em>.co</em></h1>
             </a>
-        </div><!--
-     --><div class="grid__item two-fifths external-wrapper">
             <?php wp_nav_menu( array(
-                'container_class'   => 'menu-header',
+                'container'         => false,
                 'menu_class'        => 'nav nav--main nav--top nav--external',
                 'theme_location'    => 'external_nav'
             ) ); ?>
         </div>
+
+        <div class="indent-bg">
+            <div class="indent-fg indent-fg--grey"></div>
         </div>
     </header>

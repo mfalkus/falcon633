@@ -25,7 +25,7 @@ Tags:
     GENERAL
 \*------------------------------------*/
 html, body {
-    background: #eeeeee;
+    background: $bg-grey;
 }
 * {
     color: #333;
@@ -92,6 +92,7 @@ img {
         border-top: 1px solid #dbdada;
         padding-top: 25px;
     }
+    margin-bottom: 30px;
 }
 /* p */.lead {
     font-size: 21px;
@@ -133,6 +134,7 @@ img {
 .content-prep {
     max-width: $max-content;
     margin: 0 auto;
+    padding: 10px 0;
 }
 .top-indent.content-wrapper {
     padding-top: 50px;
@@ -149,25 +151,30 @@ img {
 /*------------------------------------*\
     INDENTS
 \*------------------------------------*/
-$top-indent: 0%;
-$indent: 100%; // 100% is no indent
-.lower-indent {
-    /* Checkout: http://bennettfeely.com/clippy/ */
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 0);
-    padding-bottom: 30px;
+$indent-size: 30px;
+.indent-bg {
+    height: $indent-size;
+    position: relative;
+    background: transparent;
 }
+.indent-fg {
+    -webkit-clip-path: polygon(50% 0, 100% $indent-size, 100% 100%, 50% 100%, 0 100%, 0 $indent-size);
+    clip-path: polygon(50% 0, 100% $indent-size, 100% 100%, 50% 100%, 0 100%, 0 $indent-size);
 
-.top-indent {
-    -webkit-clip-path: polygon(50% 0, 100% $top-indent, 100% 100%, 50% 100%, 0 100%, 0 $top-indent);
-    clip-path: polygon(50% 0, 100% $top-indent, 100% 100%, 50% 100%, 0 100%, 0 $top-indent);
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
-
-.both-indent {
-    -webkit-clip-path: polygon(50% 0%, 100% $top-indent, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 $top-indent);
-    clip-path: polygon(50% 0%, 100% $top-indent, 100% 100%, 50% $indent, 49% $indent, 0 100%, 0 $top-indent);
-    padding-top: 30px;
-    padding-bottom: 30px;
+.indent-fg--grey {
+    background: $bg-grey;
+}
+.indent-fg--purple {
+    background: $purple;
+}
+.indent-fg--white {
+    background: #FFF;
 }
 
 /*------------------------------------*\
@@ -181,7 +188,6 @@ $indent: 100%; // 100% is no indent
         vertical-align: baseline;
     }
 
-    @extend .lower-indent;
 }
 .falkusco-wrapper {
     text-align: center;
@@ -229,14 +235,11 @@ $indent: 100%; // 100% is no indent
     }
 }
 
-.nav--primary {
-    text-align: right;
-}
-.nav--primary li {
-    margin-right: 0;
-}
-.nav--external li {
-    margin-left: 0;
+.menu-wrapper {
+    text-align: center;
+    ul {
+        display: inline-block;
+    }
 }
 
 

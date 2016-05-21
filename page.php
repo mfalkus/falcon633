@@ -10,9 +10,12 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <div class="section-header">
     <h2><?php the_title(); ?></h2>
+    <div class="indent-bg">
+        <div class="indent-fg indent-fg--white"></div>
+    </div>
 </div>
 
-<div class="both-indent content-wrapper">
+<div class="content-wrapper">
     <div class="content-prep">
         <div class="grid">
         <div class="grid__item one-whole">
@@ -23,6 +26,10 @@ get_header(); ?>
         </div>
         </div>
 	</div>
+
+    <div class="indent-bg">
+        <div class="indent-fg indent-fg--grey"></div>
+    </div>
 </div>
 <?php endwhile; // End of the loop. ?>
 

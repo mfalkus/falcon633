@@ -9,9 +9,12 @@ get_header(); ?>
 
 <div class="section-header">
     <h2>Blog</h2>
+    <div class="indent-bg">
+        <div class="indent-fg indent-fg--white"></div>
+    </div>
 </div>
 
-<div class="both-indent content-wrapper">
+<div class="content-wrapper">
     <div class="content-prep">
         <div class="grid">
         <div class="grid__item one-whole post-list">
@@ -27,6 +30,10 @@ get_header(); ?>
 
         </div>
         </div>
+    </div>
+
+    <div class="indent-bg">
+        <div class="indent-fg indent-fg--grey"></div>
     </div>
 </div>
 
