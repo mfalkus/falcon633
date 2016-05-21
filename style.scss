@@ -111,7 +111,7 @@ img {
     padding: 0 20px;
 }
 .meta-row {
-    padding-top: 12px;
+    margin-bottom: 30px;
 }
 @media (max-width: $desk-start) {
     .one-half {
@@ -274,18 +274,24 @@ $indent-size: 30px;
 .section-header {
     text-align: center;
     h2 {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         color: $green;
     }
+
+    /* Use h2.title above subtitle */
+    .title {
+        margin-bottom: 10px;
+    }
+    .subtitle {
+        text-transform: uppercase;
+        font-weight: 200;
+        color: #7e7e7e;
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
 }
-.subtitle {
-    text-transform: uppercase;
-    font-weight: 200;
-    color: #7e7e7e;
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-}
+
 .date {
     font-weight: bold;
     font-size: 16px;
@@ -399,4 +405,29 @@ a img.aligncenter {
     top: 5px;
     width: auto;
     z-index: 100000; /* Above WP toolbar. */
+}
+
+
+blockquote {
+    font-size: 1.15em;
+    position: relative;
+    text-indent: 0;
+    p {
+        width: 90%;
+        font-style: italic;
+    }
+    p:before {
+        content: '“';
+        position: absolute;
+        font-size: 70px;
+        left: -40px;
+        top: -25px;
+        color: $purple;
+    }
+    p:after {
+        content: none;
+    }
+    ul {
+        list-style-position: inside;
+    }
 }
