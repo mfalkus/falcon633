@@ -19,7 +19,7 @@
 
         <div class="footer-bottom">
             <hr class="rule" />
-            <p class="micro">
+            <p class="milli">
                 <?php bloginfo('description'); ?>
                 &dash; Copyright &copy; <?php echo date("Y"); ?>
             </p>

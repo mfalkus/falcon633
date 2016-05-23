@@ -223,15 +223,16 @@ $indent-size: 30px;
     text-align: center;
     h1 {
         font-size: 24px;
+        margin-bottom: 15px;
     }
-    padding: 30px 0 60px;
+    padding: 0 0 50px;
     p {
         color: #909090;
     }
 }
 // Logo and footer menu
 .footer-top {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 .header-push {
     height: 108px;
@@ -262,6 +263,9 @@ $indent-size: 30px;
         padding-top: 20px 8px 0;
         color: #FFF;
     }
+}
+.nav--footer li {
+    font-weight: bold;
 }
 
 .menu-wrapper {
