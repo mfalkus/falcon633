@@ -9,7 +9,13 @@ get_header(); ?>
 
 <?php if (!is_single()) { ?>
 <header class="section-header">
-    <h1>Blog</h1>
+    <?php if (is_category()) { ?>
+        <h1><?php echo single_cat_title() ?></h1>
+    <?php } else if (is_tag()) { ?>
+        <h1><?php echo single_tag_title() ?></h1>
+    <?php } else { ?>
+        <h1>Blog</h1>
+    <?php } ?>
     <div class="indent-bg">
         <div class="indent-fg indent-fg--white"></div>
     </div>
