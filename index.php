@@ -7,21 +7,26 @@
 
 get_header(); ?>
 
-<header class="section-header">
 <?php if (!is_single()) { ?>
+<header class="section-header">
     <h1>Blog</h1>
-<?php } else { ?>
-    <?php if ( 'post' === get_post_type() ) { ?>
-        <h1 class="title"><?php the_title() ?></h1>
-        <h4 class="subtitle"><?php falcon_posted_on(); ?></h4>
-    <?php } else { ?>
-        <h2><?php the_title() ?></h2>
-    <?php } ?>
-<?php } ?>
     <div class="indent-bg">
         <div class="indent-fg indent-fg--white"></div>
     </div>
 </header>
+<?php } else { ?>
+<header class="section-header section-header--post">
+    <?php if ( 'post' === get_post_type() ) { ?>
+        <h4 class="subtitle"><?php falcon_posted_on(); ?></h4>
+        <h1 class="title"><?php the_title() ?></h1>
+    <?php } else { ?>
+        <h1><?php the_title() ?></h1>
+    <?php } ?>
+    <div class="indent-bg">
+        <div class="indent-fg indent-fg--white"></div>
+    </div>
+</header>
+<?php } ?>
 
 <div class="content-wrapper">
     <div class="content-prep">
@@ -35,7 +40,9 @@ get_header(); ?>
             ); ?>
         <?php endwhile; ?>
 
+        <?php if (!is_single()) { ?>
         <?php echo falcon_pagination() ?>
+        <?php } ?>
 
         </div>
         </div>
