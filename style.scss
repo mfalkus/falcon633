@@ -18,6 +18,7 @@ Tags:
     IMPORTS AND SETUP
 \*------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:200,400,700);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono);
 @import "css/vars";
 @import "css/inuit.css/inuit";
 
@@ -80,14 +81,15 @@ ul {
 }
 code, pre {
     font-size: 90%;
-    background-color: #D4F3FF;
-    border-radius: 4px;
+    background-color: $bg-light-green;
+    color: $purple;
+    font-family: 'Fira Mono', monospace, serif;
 }
 pre {
     padding: 8px 12px;
 }
 code {
-    padding: 2px 4px;
+    padding: 0 6px;
 }
 img {
     max-width: 100%;
