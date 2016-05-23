@@ -462,6 +462,23 @@ blockquote {
     }
 }
 
+
+/*------------------------------------*\
+    HACKS
+\*------------------------------------*/
+.split-code {
+    border: 1px $bg-grey solid;
+    td {
+        width: 50%;
+        vertical-align: top;
+        border: 1px $bg-grey solid;
+    }
+}
+
+
+/*------------------------------------*\
+    HACKS
+\*------------------------------------*/
 #wpadminbar {
     top: auto;
     bottom: 0;
