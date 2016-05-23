@@ -9,10 +9,10 @@ get_header(); ?>
 
 <header class="section-header">
 <?php if (!is_single()) { ?>
-    <h2>Blog</h2>
+    <h1>Blog</h1>
 <?php } else { ?>
     <?php if ( 'post' === get_post_type() ) { ?>
-        <h2 class="title"><?php the_title() ?></h2>
+        <h1 class="title"><?php the_title() ?></h1>
         <h4 class="subtitle"><?php falcon_posted_on(); ?></h4>
     <?php } else { ?>
         <h2><?php the_title() ?></h2>
