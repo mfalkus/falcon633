@@ -29,6 +29,22 @@
 
 </div><!-- total-warpper -->
 
+<script>
+    function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                smallHeadStart = 40,
+                header = document.getElementById("header");
+
+            if (distanceY > smallHeadStart) {
+                header.classList.add("smaller");
+            } else {
+                header.classList.remove("smaller");
+            }
+        });
+    }
+    window.onload = init();
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

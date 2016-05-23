@@ -50,6 +50,8 @@ h1, h2, h3, h4, h5, h6 {
         color: #FFF;
         font-size: 43px;
         letter-spacing: 1px;
+        margin-bottom: 0;
+        @include vendor(transition, all 0.3s ease);
     }
     em {
         font-style: normal;
@@ -60,7 +62,16 @@ h1, h2, h3, h4, h5, h6 {
     color: $green;
 }
 .falcon--primary {
+    @include vendor(transition, all 0.3s ease);
     padding: 24px;
+}
+.smaller {
+    .falcon h1 {
+        font-size: 38px;
+    }
+    .falcon--primary {
+        padding: 15px 24px;
+    }
 }
 
 ul {
@@ -176,18 +187,29 @@ $indent-size: 30px;
 .indent-fg--white {
     background: #FFF;
 }
+.indent-bg--point {
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
+    background: $green;
+}
 
 /*------------------------------------*\
     HEADER FOOTER
 \*------------------------------------*/
 .header-wrapper {
-    background: $green;
     width: 100%;
     margin-bottom: 0; // not required due to point and padding;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
     .grid__item {
         vertical-align: baseline;
     }
-
+}
+.header-wrapper.smaller {
+    .menu-wrapper {
+    }
 }
 .falkusco-wrapper {
     text-align: center;
@@ -207,6 +229,10 @@ $indent-size: 30px;
 // Logo and footer menu
 .footer-top {
     margin-bottom: 35px;
+}
+.header-push {
+    height: 108px;
+    background: $bg-grey;
 }
 
 /*------------------------------------*\
@@ -236,6 +262,7 @@ $indent-size: 30px;
 }
 
 .menu-wrapper {
+    background: $green;
     text-align: center;
     ul {
         display: inline-block;
@@ -430,4 +457,9 @@ blockquote {
     ul {
         list-style-position: inside;
     }
+}
+
+#wpadminbar {
+    top: auto;
+    bottom: 0;
 }

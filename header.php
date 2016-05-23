@@ -18,7 +18,7 @@
 <body <?php body_class(); ?>>
 
 <div class="total-wrapper">
-	<header class="header-wrapper" role="banner">
+	<header id="header" class="header-wrapper">
         <div class="menu-wrapper">
             <?php wp_nav_menu( array(
                 'container'         => false,
@@ -34,8 +34,8 @@
                 'theme_location'    => 'external_nav'
             ) ); ?>
         </div>
-
-        <div class="indent-bg">
-            <div class="indent-fg indent-fg--grey"></div>
+        <div class="indent-bg indent-bg--point">
         </div>
     </header>
+    <div class="header-push indent-fg--grey"></div>
+
