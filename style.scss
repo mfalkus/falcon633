@@ -438,28 +438,52 @@ a img.aligncenter {
 }
 
 
+/*------------------------------------*\
+    BLOCKQUOTES
+\*------------------------------------*/
 blockquote {
     font-size: 1.15em;
     position: relative;
     text-indent: 0;
+    padding-left: 120px;
     p {
-        width: 90%;
-        font-style: italic;
+        font-weight: bold;
     }
     p:before {
         content: '“';
         position: absolute;
-        font-size: 70px;
-        left: -40px;
-        top: -25px;
-        color: $purple;
+        font-size: 250px;
+        left: 0px;
+        top: 0px;
+        line-height: 100%;
+        color: $green;
     }
     p:after {
         content: none;
     }
+    p.author{
+        &:before {
+            display: none;
+        }
+        color: $purple;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
     ul {
         list-style-position: inside;
     }
+}
+.entry-content .bq-wrapper {
+    border: 1px $border-grey solid;
+    border-width: 1px 0 1px;
+    padding: 25px 0;
+    margin-bottom: 25px;
+}
+.entry-content blockquote {
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
 }
 
 
@@ -467,11 +491,11 @@ blockquote {
     HACKS
 \*------------------------------------*/
 .split-code {
-    border: 1px $bg-grey solid;
+    border: 1px $border-grey solid;
+    border-width: 1px 0 1px;
     td {
         width: 50%;
         vertical-align: top;
-        border: 1px $bg-grey solid;
     }
 }
 
