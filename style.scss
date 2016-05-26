@@ -389,39 +389,49 @@ a img.aligncenter {
 }
 
 .wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
+    background: transparent;
     max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
+    padding: 0 0 5px;
     text-align: center;
-}
 
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
-}
+    .alignnone {
+        margin: 5px 20px 20px 0;
+    }
 
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
+    .alignleft {
+        margin: 5px 20px 20px 0;
+    }
 
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
+    .alignright {
+        margin: 5px 0 20px 20px;
+    }
 
-.wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
-}
+    img {
+        border: 0 none;
+        height: auto;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0;
+        width: auto;
+    }
 
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
+    .wp-caption-text {
+        color: #FFF;
+        padding: 12px 8px;
+        margin: 0;
+        font-size: 0.95em;
+        background: $purple;
+    }
+
+    &::after {
+        content: ' ';
+        background: $purple;
+        width: 100%;
+        display: block;
+        height: 15px;
+        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
+    }
 }
 
 /* Text meant only for screen readers. */
