@@ -554,8 +554,8 @@ blockquote {
         $link-indent: 8px;
         $link-indent-height: 35%;
         $link-indent-height-b: 100% - $link-indent-height;
-        -webkit-clip-path: polygon($link-indent 0, 99% 0, 100% 100%, $link-indent 100%, 0% $link-indent-height-b, 0% $link-indent-height);
-        clip-path: polygon($link-indent 0, 99% 0, 100% 100%, $link-indent 100%, 0% $link-indent-height-b, 0% $link-indent-height);
+        -webkit-clip-path: polygon($link-indent 0, 100% 0, 100% 100%, $link-indent 100%, 0% $link-indent-height-b, 0% $link-indent-height);
+        clip-path: polygon($link-indent 0, 100% 0, 100% 100%, $link-indent 100%, 0% $link-indent-height-b, 0% $link-indent-height);
 
         &:hover {
             background: $green;
