@@ -36,7 +36,7 @@ get_header(); ?>
 
 <div class="content-wrapper">
     <div class="content-prep">
-        <div class="grid">
+        <div class="grid grid--full">
         <div class="grid__item one-whole post-list">
 
         <?php while ( have_posts() ) : the_post(); ?>

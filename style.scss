@@ -101,11 +101,14 @@ img {
     color: #dbdada;
     background-color: #dbdada;
 }
+.splitter-border {
+    border-top: 1px solid #dbdada;
+    padding-top: 25px;
+}
 .post-list {
     // unlikely to get loads of pre IE9 visitors
-    .post-splitter:not(:first-child) {
-        border-top: 1px solid #dbdada;
-        padding-top: 25px;
+    .post-splitter:not(:first-child) .grid__item {
+        @extend .splitter-border;
     }
     margin-bottom: 30px;
 }
@@ -298,7 +301,7 @@ $indent-size: 3vw;
     PAGINATION
 \*------------------------------------*/
 .falcon-pagination-wrapper {
-    @extend .post-splitter;
+    @extend .splitter-border;
     text-align: center;
     margin: 25px 0;
     font-size: 20px;
