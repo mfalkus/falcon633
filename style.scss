@@ -161,13 +161,26 @@ img {
 .post-col {
     width: 85%;
 }
+.grid--full {
+    margin-left: 0;
+    .grid__item {
+        padding-left: 0;
+    }
+}
 
 
 /*------------------------------------*\
     INDENTS
 \*------------------------------------*/
-$indent-size: 30px;
+
+/*
+ * 'vw' units are proportional to the width of the page:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/length
+ * http://caniuse.com/#feat=viewport-units
+ */
+$indent-size: 3vw;
 .indent-bg {
+    height: 30px;
     height: $indent-size;
     position: relative;
     background: transparent;
