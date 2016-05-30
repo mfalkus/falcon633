@@ -17,11 +17,12 @@
     </div><!--
  --><div class="grid__item post-col">
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <?php if (!is_front_page()) { ?>
+        <?php get_template_part( 'content-templates/post', 'meta'); ?>
+        <?php } ?>
+
         <?php the_excerpt(); ?>
 
-        <?php if (!is_front_page()) { ?>
-        <?php get_template_part( 'content-templates/post', 'footer'); ?>
-        <?php } ?>
     </div>
 </div>
 
@@ -39,7 +40,7 @@
         ?>
     </div>
 
-    <?php get_template_part( 'content-templates/post', 'footer'); ?>
+    <?php get_template_part( 'content-templates/post', 'meta'); ?>
 
 </article>
 <?php } ?>
