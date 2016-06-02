@@ -29,7 +29,7 @@ html, body {
     background: $bg-grey;
 }
 * {
-    color: #333;
+    color: $std-grey;
     font-family: $brand-face;
 }
 a {
@@ -37,7 +37,7 @@ a {
     font-weight: bold;
     text-decoration: none;
     &:hover {
-        color: #000;
+        color: $std-grey;
     }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -113,7 +113,7 @@ img {
     margin-bottom: 30px;
 }
 /* p */.lead {
-    font-size: 21px;
+    font-size: 20px; // pos 19px
     line-height: 150%;
     font-weight: 200;
 }
@@ -353,6 +353,7 @@ $indent-size: 3vw;
     }
 }
 .section-header--post {
+    padding-top: 20px;
     .title {
         color: $purple;
         margin-bottom: 50px;
@@ -555,10 +556,7 @@ blockquote {
 /*------------------------------------*\
     HACKS
 \*------------------------------------*/
-#wpadminbar {
-    top: auto;
-    bottom: 0;
-}
+
 
 
 /*------------------------------------*\
