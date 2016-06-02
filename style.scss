@@ -156,7 +156,7 @@ img {
 .content-prep {
     max-width: $max-content;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 35px 2%;
 }
 .top-indent.content-wrapper {
     padding-top: 50px;
@@ -197,7 +197,7 @@ $indent-size: 3vw;
     clip-path: polygon(50% 0, 100% $indent-size, 100% 100%, 50% 100%, 0 100%, 0 $indent-size);
 
     position: absolute;
-    bottom: 0; 
+    bottom: -1px; // FIX for white border issue, web kit 06 2016
     left: 0;
     height: 100%;
     width: 100%;
@@ -262,16 +262,25 @@ $indent-size: 3vw;
     background: $bg-grey;
 }
 
+
+/*------------------------------------*\
+    HEADER FOOTER
+\*------------------------------------*/
+.meta-titles {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
 /*------------------------------------*\
     NAVIGATION
 \*------------------------------------*/
 .nav--main {
     margin-bottom: 0;
     li {
+        @extend .meta-titles;
         font-size: 14px;
         margin: 0 9px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
         &:hover, &.current-menu-item, &.current_page_parent {
             font-weight: bold;
         }
@@ -354,7 +363,10 @@ $indent-size: 3vw;
         color: #7e7e7e;
         font-size: 16px;
         letter-spacing: 2px;
-        margin-bottom: 30px;
+        // margin-bottom, padding from -inner
+    }
+    .section-header-inner {
+        padding: 25px 0;
     }
 }
 .section-header--post {
@@ -370,6 +382,10 @@ $indent-size: 3vw;
     }
 }
 
+.date-col {
+    @extend .meta-titles;
+    line-height: 130%;
+}
 .date {
     font-weight: bold;
     font-size: 16px;

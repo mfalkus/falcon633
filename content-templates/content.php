@@ -7,7 +7,7 @@
 ?>
 
 <?php if (!is_single()) { ?>
-<div class="grid post-splitter">
+<div class="grid grid--full post-splitter">
     <div class="grid__item date-col">
         <span class="date"><?php
             $date = the_date('d M Y', '', '', FALSE);

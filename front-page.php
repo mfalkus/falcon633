@@ -8,8 +8,10 @@
 get_header(); ?>
 
 <div class="section-header">
-    <h1 class="title">Blog</h1>
-    <h4 class="subtitle">The Latest</h3>
+    <div class="section-header-inner">
+        <h1 class="title">Blog</h1>
+        <h4 class="subtitle">The Latest</h3>
+    </div>
     <div class="indent-bg">
         <div class="indent-fg indent-fg--white"></div>
     </div>
