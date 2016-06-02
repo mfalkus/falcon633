@@ -38,6 +38,7 @@ a {
     text-decoration: none;
     &:hover {
         color: $std-grey;
+        border-bottom: 1px solid $std-grey;
     }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -59,6 +60,9 @@ h1, h2, h3, h4, h5, h6 {
     em {
         font-style: normal;
         color: $purple;
+    }
+    &:hover {
+        border: none;
     }
 }
 /* a */.falcon--dark h1 {
@@ -265,15 +269,16 @@ $indent-size: 3vw;
     margin-bottom: 0;
     li {
         font-size: 14px;
-        margin: 0 8px;
+        margin: 0 9px;
         text-transform: uppercase;
         letter-spacing: 2px;
         &:hover, &.current-menu-item, &.current_page_parent {
             font-weight: bold;
         }
         a {
-            padding: 0 4px;
+            padding-bottom: 4px;
             font-weight: normal;
+            border-bottom: 2px transparent solid;
             &:hover {
                 border-bottom: 2px $purple solid;
             }
@@ -582,6 +587,7 @@ blockquote {
 
         &:hover {
             background: $green;
+            border: none;
         }
     }
     &.tag-links a {
