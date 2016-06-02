@@ -132,3 +132,15 @@ function custom_excerpt_length( $length ) {
     return 40;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 100);
+
+// Replaces [..] with read on links
+function modify_read_more_link() {
+    return '<a class="read-more" href="' . get_permalink() . '">Read On</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
+function new_excerpt_more($more) {
+    global $post;
+    return '... <a class="read-more" href="'. get_permalink($post->ID) . '">Read On</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

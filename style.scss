@@ -518,6 +518,11 @@ a img.aligncenter {
     z-index: 100000; /* Above WP toolbar. */
 }
 
+.read-more {
+    @extend .meta-titles;
+    font-size: 12px;
+}
+
 
 /*------------------------------------*\
     BLOCKQUOTES
