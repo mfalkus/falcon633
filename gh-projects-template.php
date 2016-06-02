@@ -16,7 +16,7 @@
  * @return HTML output before project list
  */
 function ghprojects_pre_list() {
-    return '<div class="grid__item one-whole post-list">';
+    return '<div class="grid grid--full"><div class="grid__item one-whole post-list">';
 }
 
 
@@ -27,7 +27,7 @@ function ghprojects_pre_list() {
  */
 function ghprojects_list_project($project) {
     return '
-<div class="grid post-splitter">
+<div class="post-splitter">
     <div class="grid__item date-col">
         <span class="date">'
             . date('d M Y', strtotime($project->pushed_at))
@@ -49,5 +49,5 @@ function ghprojects_list_project($project) {
  * @return HTML to close out list
  */
 function ghprojects_post_list() {
-    return '</div>';
+    return '</div></div>';
 }
