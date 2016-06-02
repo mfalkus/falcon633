@@ -156,7 +156,7 @@ img {
 .content-prep {
     max-width: $max-content;
     margin: 0 auto;
-    padding: 35px 2%;
+    padding: 42px 2%;
 }
 .top-indent.content-wrapper {
     padding-top: 50px;
@@ -335,10 +335,17 @@ $indent-size: 3vw;
 .btn {
     border: 1px $green solid;
     color: $green;
-    text-transform: uppercase;
+    @extend .meta-titles;
+    font-size: 13px;
+
+    // Cool background inspiration as mentioned here:
+    // http://stackoverflow.com/a/20751998
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, transparent 50%, $green 50%);
+    transition: background-position 0.5s;
     &:hover {
-        background: $green;
         color: #FFF;
+        background-position: 0 100%;
     }
 }
 
