@@ -231,10 +231,6 @@ $indent-size: 3vw;
         vertical-align: baseline;
     }
 }
-.header-wrapper.smaller {
-    .menu-wrapper {
-    }
-}
 .falkusco-wrapper {
     text-align: center;
 }
@@ -398,6 +394,7 @@ $indent-size: 3vw;
     font-weight: bold;
     font-size: 16px;
     color: $green;
+    word-spacing: 100px; // high to force each on it's own line
 }
 
 

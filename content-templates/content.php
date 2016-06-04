@@ -9,11 +9,7 @@
 <?php if (!is_single()) { ?>
 <div class="grid grid--full post-splitter">
     <div class="grid__item date-col">
-        <span class="date"><?php
-            $date = the_date('d M Y', '', '', FALSE);
-            echo str_replace(' ', '<br />', $date);
-        ?>
-        </span>
+        <span class="date"><?php the_date('d M Y'); ?></span>
     </div><!--
  --><div class="grid__item post-col">
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
