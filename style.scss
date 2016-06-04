@@ -319,6 +319,20 @@ $indent-size: 3vw;
         }
     }
 }
+.nav--mobile {
+    ul {
+        list-style-type: none;
+    }
+    li {
+        margin: 14px 0;
+        a {
+            color: #FFF;
+            &:hover {
+                border-color: #FFF;
+            }
+        }
+    }
+}
 .nav--top {
     display: inline-block;
     li {
@@ -345,6 +359,17 @@ $indent-size: 3vw;
     text-align: center;
 }
 
+.mobile-nav-wrapper {
+    display: block;
+    background: $green;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    @include vendor(transition, max-height 0.5s);
+    &.on {
+        max-height: 250px;
+    }
+}
 @media (max-width: $desk-start) {
     .nav--split {
         display: none;
@@ -353,6 +378,7 @@ $indent-size: 3vw;
 
 .mobile-menu-item {
     display: inline-block;
+    font-size: 1.5em;
     color: #FFF;
     i {
         color: inherit;
@@ -362,7 +388,9 @@ $indent-size: 3vw;
         border: none;
         color: $purple;
     }
-    font-size: 1.5em;
+    &:focus {
+        outline: none;
+    }
 }
 
 

@@ -25,6 +25,7 @@ function falcon_setup() {
         'primary_nav'   => esc_html__( 'Primary Menu', 'falcon' ),
         'footer_nav'    => esc_html__( 'Footer Menu', 'falcon' ),
         'external_nav'  => esc_html__( 'External/Social Menu', 'falcon' ),
+        'mobile_nav'    => esc_html__( 'Pull-down Main Mobile Menu', 'falcon' ),
     ) );
 
     /*

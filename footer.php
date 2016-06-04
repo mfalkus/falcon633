@@ -42,6 +42,13 @@
                 header.classList.remove("smaller");
             }
         });
+
+        var mobile_trigger = document.getElementById('menu_trigger');
+        mobile_trigger.addEventListener('click', function(e) {
+            var mobile_menu = document.getElementById("mobile_menu_wrapper");
+            mobile_menu.classList.toggle('on');
+            return false;
+        });
     }
     window.onload = init();
 </script>

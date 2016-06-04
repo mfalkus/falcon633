@@ -21,7 +21,7 @@
 	<header id="header" class="header-wrapper">
         <div class="grid menu-wrapper">
         <div class="grid__item mobile-trigger-wrapper">
-            <a href="#menu" class="mobile-menu-item mobile-trigger">
+            <a id="menu_trigger" href="#menu" class="mobile-menu-item mobile-trigger">
                 <i class="fa fa-bars"></i>
             </a>
         </div><!--
@@ -39,6 +39,7 @@
                 'menu_class'        => 'nav nav--main nav--top nav--split nav--external',
                 'theme_location'    => 'external_nav'
             ) ); ?>
+
         </div><!--
      --><div class="grid__item speech-icon-wrapper">
             <a class="mobile-menu-item" href="/say-hi">
@@ -47,6 +48,13 @@
         </div>
         </div>
 
+        <div id="mobile_menu_wrapper" class="mobile-nav-wrapper">
+            <?php wp_nav_menu( array(
+                'container'         => false,
+                'menu_class'        => 'nav nav--main nav--stacked nav--mobile nav--primary',
+                'theme_location'    => 'mobile_nav'
+            ) ); ?>
+        </div>
 
     <div class="indent-bg indent-bg--point">
     </div>
