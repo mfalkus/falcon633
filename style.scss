@@ -113,13 +113,10 @@ img {
     color: #dbdada;
     background-color: #dbdada;
 }
-.splitter-border {
-    border-top: 1px solid #dbdada;
-    padding-top: 25px;
-}
 // unlikely to get loads of pre IE9 visitors
 .post-splitter:not(:first-child) .grid__item {
-    @extend .splitter-border;
+    border-top: 1px solid #dbdada;
+    padding-top: 25px;
 }
 .post-list {
     margin-bottom: 30px;
@@ -467,6 +464,9 @@ $indent-size: 3vw;
     .date-col, .post-col {
         width: 100%;
     }
+    .post-col {
+        padding-top: 25px;
+    }
     .post-splitter:not(:first-child) .grid__item {
         border-top: 0;
     }
@@ -680,10 +680,10 @@ blockquote {
         display: inline-block;
         padding: 1px 6px 1px 10px;
         text-transform: uppercase;
-        background: $purple;
         font-weight: bold;
-        font-size: 13px;
-        color: #FFF;
+        font-size: 12px;
+        background: $bg-grey;
+        color: $std-grey;
 
         $link-indent: 8px;
         $link-indent-height: 35%;
@@ -692,14 +692,8 @@ blockquote {
         clip-path: polygon($link-indent 0, 100% 0, 100% 100%, $link-indent 100%, 0% $link-indent-height-b, 0% $link-indent-height);
 
         &:hover {
-            background: $green;
             border: none;
-        }
-    }
-    &.tag-links a {
-        background: $green;
-        &:hover {
-            background: $purple;
+            color: $purple;
         }
     }
 }
