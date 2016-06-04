@@ -373,10 +373,23 @@ $indent-size: 3vw;
     PAGINATION
 \*------------------------------------*/
 .falcon-pagination-wrapper {
-    @extend .splitter-border;
+    border-top: 1px solid #dbdada;
     text-align: center;
     margin: 25px 0;
     font-size: 20px;
+    a {
+        color: $std-grey;
+        font-weight: normal;
+    }
+    .current {
+        color: $green;
+        font-weight: bold;
+    }
+}
+@media (max-width: $desk-start) {
+    .falcon-pagination-wrapper {
+        border-top: none;
+    }
 }
 
 
