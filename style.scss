@@ -80,6 +80,14 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10px 14px;
     }
 }
+@media (max-width: $desk-start) {
+    .falcon h1 {
+        font-size: 24px;
+    }
+    .falcon--primary {
+        padding: 10px 14px;
+    }
+}
 
 ul {
     margin-left: 17px;
@@ -109,11 +117,11 @@ img {
     border-top: 1px solid #dbdada;
     padding-top: 25px;
 }
+// unlikely to get loads of pre IE9 visitors
+.post-splitter:not(:first-child) .grid__item {
+    @extend .splitter-border;
+}
 .post-list {
-    // unlikely to get loads of pre IE9 visitors
-    .post-splitter:not(:first-child) .grid__item {
-        @extend .splitter-border;
-    }
     margin-bottom: 30px;
 }
 /* p */.lead {
@@ -257,6 +265,11 @@ $indent-size: 3vw;
     height: 125px;
     background: $bg-grey;
 }
+@media (max-width: $desk-start) {
+    .header-push {
+        height: 75px;
+    }
+}
 
 
 /*------------------------------------*\
@@ -266,6 +279,24 @@ $indent-size: 3vw;
 .meta-titles {
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.mobile-trigger-wrapper,
+.speech-icon-wrapper {
+    display: none;
+}
+@media (max-width: $desk-start) {
+    .mobile-trigger-wrapper,
+    .speech-icon-wrapper {
+        display: inline-block;
+        width: 30%;
+    }
+    .speech-icon-wrapper {
+        text-align: right;
+    }
+    .desktop-menu-wrapper {
+        width: 40%;
+    }
 }
 
 
@@ -291,14 +322,17 @@ $indent-size: 3vw;
         }
     }
 }
-.nav--top li {
-    font-size: 15px;
-    margin: 0 18px;
-    a {
-        padding: 20px 0 4px;
-        color: #FFF;
-        &:hover {
-            border-color: #FFF;
+.nav--top {
+    display: inline-block;
+    li {
+        font-size: 15px;
+        margin: 0 18px;
+        a {
+            padding: 20px 0 4px;
+            color: #FFF;
+            &:hover {
+                border-color: #FFF;
+            }
         }
     }
 }
@@ -308,10 +342,30 @@ $indent-size: 3vw;
 
 .menu-wrapper {
     background: $green;
+    padding: 0 2%;
+}
+.desktop-menu-wrapper {
     text-align: center;
-    ul {
-        display: inline-block;
+}
+
+@media (max-width: $desk-start) {
+    .nav--split {
+        display: none;
     }
+}
+
+.mobile-menu-item {
+    display: inline-block;
+    color: #FFF;
+    i {
+        color: inherit;
+    }
+    border: none;
+    &:hover {
+        border: none;
+        color: $purple;
+    }
+    font-size: 1.5em;
 }
 
 
@@ -396,7 +450,20 @@ $indent-size: 3vw;
     color: $green;
     word-spacing: 100px; // high to force each on it's own line
 }
-
+@media (max-width: $desk-start) {
+    .date-col, .post-col {
+        width: 100%;
+    }
+    .post-splitter:not(:first-child) .grid__item {
+        border-top: 0;
+    }
+    .post-splitter .post-col {
+        border-bottom: 1px solid #dbdada;
+    }
+    .date {
+        word-spacing: normal;
+    }
+}
 
 /*------------------------------------*\
     WORDPRESS CORE

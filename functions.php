@@ -83,6 +83,7 @@ add_action( 'widgets_init', 'falcon_widgets_init' );
  */
 function falcon_scripts() {
     wp_enqueue_style( 'oppan-falcon-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'falcon_scripts' );
 

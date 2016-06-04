@@ -19,10 +19,16 @@
 
 <div class="total-wrapper">
 	<header id="header" class="header-wrapper">
-        <div class="menu-wrapper">
+        <div class="grid menu-wrapper">
+        <div class="grid__item mobile-trigger-wrapper">
+            <a href="#menu" class="mobile-menu-item mobile-trigger">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div><!--
+     --><div class="grid__item desktop-menu-wrapper">
             <?php wp_nav_menu( array(
                 'container'         => false,
-                'menu_class'        => 'nav nav--main nav--top nav--primary',
+                'menu_class'        => 'nav nav--main nav--top nav--split nav--primary',
                 'theme_location'    => 'primary_nav'
             ) ); ?>
 			<a class="falcon falcon--primary" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -30,12 +36,20 @@
             </a>
             <?php wp_nav_menu( array(
                 'container'         => false,
-                'menu_class'        => 'nav nav--main nav--top nav--external',
+                'menu_class'        => 'nav nav--main nav--top nav--split nav--external',
                 'theme_location'    => 'external_nav'
             ) ); ?>
+        </div><!--
+     --><div class="grid__item speech-icon-wrapper">
+            <a class="mobile-menu-item" href="/say-hi">
+                <i class="fa fa-comment-o"></i>
+            </a>
         </div>
-        <div class="indent-bg indent-bg--point">
         </div>
+
+
+    <div class="indent-bg indent-bg--point">
+    </div>
     </header>
     <div class="header-push indent-fg--grey"></div>
 
