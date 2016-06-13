@@ -32,7 +32,7 @@
                 'theme_location'    => 'primary_nav'
             ) ); ?>
 			<a class="falcon falcon--primary" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <h1>Falkus<em>.co</em></h1>
+                <?php echo site_heading_tag() ?>
             </a>
             <?php wp_nav_menu( array(
                 'container'         => false,

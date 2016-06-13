@@ -148,3 +148,15 @@ function new_excerpt_more($more) {
     return '... <a class="read-more" href="'. get_permalink($post->ID) . '">Read On</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+/*
+ * Take the blog title, assumed to a domain.
+ * Find the first dot and use alternative colour for everything after this.
+ * e.g. falkus _.co._, foo _.bar.uk_
+ */
+function site_heading_tag() {
+    $name = get_bloginfo('name');
+    $dot_post = strpos($name, '.');
+
+    return '<h1>' . substr($name, 0, $dot_post) . '<span class="alternative-colour">' . substr($name, $dot_post) . '</span></h1>';
+}
