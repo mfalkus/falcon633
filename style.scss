@@ -196,9 +196,6 @@ $indent-size: 3vw;
     background: transparent;
 }
 .indent-fg {
-    -webkit-clip-path: polygon(50% 0, 100% $indent-size, 100% 100%, 50% 100%, 0 100%, 0 $indent-size);
-    clip-path: polygon(50% 0, 100% $indent-size, 100% 100%, 50% 100%, 0 100%, 0 $indent-size);
-
     position: absolute;
     bottom: -1px; // FIX for white border issue, web kit 06 2016
     left: 0;
@@ -215,10 +212,15 @@ $indent-size: 3vw;
     background: #FFF;
 }
 .indent-bg--point {
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
     background: $green;
 }
+
+.svg-clip {
+    height: 0;
+    width: 0;
+    float: left; // FF not respecting h/w without this
+}
+
 
 /*------------------------------------*\
     HEADER FOOTER

@@ -160,3 +160,36 @@ function site_heading_tag() {
 
     return '<h1>' . substr($name, 0, $dot_post) . '<span class="alternative-colour">' . substr($name, $dot_post) . '</span></h1>';
 }
+
+function falcon_indent_styles() { ?>
+    <style>
+    .indent-point {
+        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
+        -webkit-clip-path: url('#clip-indent');
+        clip-path: url('#clip-indent');
+    }
+    .indent-fg {
+        -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 50% 100%, 0 100%, 0 100%);
+        clip-path: polygon(50% 0, 100% 100%, 100% 100%, 50% 100%, 0 100%, 0 100%);
+        -webkit-clip-path: url('#clip-outdent');
+        clip-path: url('#clip-outdent');
+    }
+    </style>
+<?php
+}
+add_action('wp_head', 'falcon_indent_styles');
+
+function falcon_indent_svg() { ?>
+    <svg class="svg-clip">
+      <defs>
+        <clipPath id="clip-indent" clipPathUnits="objectBoundingBox">
+          <polygon points="0.5 0, 1 0, 1 1, 0.5 0, 0 1, 0 0" />
+        </clipPath>
+        <clipPath id="clip-outdent" clipPathUnits="objectBoundingBox">
+          <polygon points="0.5 0, 1 1, 1 1, 0.5 1, 0 1, 0 1" />
+        </clipPath>
+      </defs>
+    </svg>
+<?php
+}
