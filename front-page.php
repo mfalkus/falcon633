@@ -37,45 +37,8 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="indent-bg">
-        <div class="indent-fg indent-fg--purple"></div>
-    </div>
 </div>
 
-<div class="content-wrapper content-wrapper--highlight">
-    <div class="content-prep">
-        <?php if(!'out-of-dev') { ?>
-        <div class="grid">
-        <div class="grid__item one-whole">
-
-            <?php if ( have_posts() ) : ?>
-            <?php while ( have_posts() ) : the_post(); ?>
-                <?php the_content(); ?>
-            <?php endwhile; // end of the loop. ?>
-            <?php endif; ?>
-
-        </div>
-        </div>
-        <?php } else { ?>
-
-        <div class="grid">
-        <div class="grid__item one-half">
-            <p class="lead">Currently based (near) Bath, UK. I’ve been fiddling
-            with technology for as long as I can remember. My first computer was a
-            Psion Organiser II, originally belonging to my Dad who used it for some
-            on-site insurance quoting program.</p>
-            <p><a href="#" class="btn">Shoot me an email</a></p>
-        </div><!--
-     --><div class="grid__item one-half">
-            <img src="https://falkus.co/wp-content/uploads/2015/08/falkus-drums.jpg" />
-        </div>
-        </div>
-        <?php } ?>
-    </div>
-
-    <div class="indent-bg">
-        <div class="indent-fg indent-fg--grey"></div>
-    </div>
-</div>
+<?php get_template_part('cta', 'footer'); ?>
 
 <?php get_footer(); ?>

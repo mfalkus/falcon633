@@ -26,11 +26,10 @@ get_header(); ?>
         </div>
         </div>
 	</div>
-
-    <div class="indent-bg">
-        <div class="indent-fg indent-fg--grey"></div>
-    </div>
 </div>
+
+<?php get_template_part('cta', 'footer'); ?>
 <?php endwhile; // End of the loop. ?>
+
 
 <?php get_footer(); ?>
