@@ -9,7 +9,7 @@ get_header(); ?>
 
 <?php falcon_section_header_open() ?>
     <h1>Blog</h1>
-    <h5 class="subtitle">The Latest</h5>
+    <h4 class="subtitle">The Latest</h4>
 <?php falcon_section_header_close() ?>
 
 <div class="content-wrapper">

@@ -215,9 +215,13 @@ function falcon_contact_url() {
     return $return_url;
 }
 
-function falcon_section_header_open() {
+function falcon_section_header_open($opt_class = '') {
+    $class = 'section-header';
+    if ($opt_class) {
+        $class .= ' ' . $opt_class;
+    }
 ?>
-<div class="section-header">
+<div class="<?php echo $class ?>">
     <div class="section-header-inner">
 <?php
 }
