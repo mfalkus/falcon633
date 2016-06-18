@@ -26,6 +26,7 @@ function falcon_setup() {
         'footer_nav'    => esc_html__( 'Footer Menu', 'falcon' ),
         'external_nav'  => esc_html__( 'External/Social Menu', 'falcon' ),
         'mobile_nav'    => esc_html__( 'Pull-down Main Mobile Menu', 'falcon' ),
+        'mobile_contact'=> esc_html__( 'Speech-icon/contact Mobile Button', 'falcon' ),
     ) );
 
     /*
@@ -192,4 +193,24 @@ function falcon_indent_svg() { ?>
       </defs>
     </svg>
 <?php
+}
+
+/*
+ * Try get the first URL from mobile_contact menu, failing that return the
+ * homepage URL for this blog.
+ */
+function falcon_contact_url() {
+    // mobile_contact is the specified menu we use for the contact button
+    $locations = get_nav_menu_locations();
+    $menu = get_term( $locations['mobile_contact'], 'nav_menu' );
+    $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+    $return_url = FALSE;
+    foreach ( $menu_items as $item ) {
+        $return_url = $item->url;
+    }
+    if (!$return_url) {
+        $return_url = get_bloginfo('url');
+    }
+    return $return_url;
 }

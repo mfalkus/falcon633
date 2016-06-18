@@ -43,7 +43,7 @@
 
         </div><!--
      --><div class="grid__item speech-icon-wrapper">
-            <a class="mobile-menu-item" href="/say-hi">
+            <a class="mobile-menu-item" href="<?php echo falcon_contact_url() ?>">
                 <i class="fa fa-comment-o"></i>
             </a>
         </div>
