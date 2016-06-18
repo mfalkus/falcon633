@@ -28,7 +28,7 @@ get_header(); ?>
 	</div>
 </div>
 
-<?php get_template_part('cta', 'footer'); ?>
+<?php get_template_part('parts/cta', 'footer'); ?>
 <?php endwhile; // End of the loop. ?>
 
 

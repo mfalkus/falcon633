@@ -39,6 +39,6 @@ get_header(); ?>
 
 </div>
 
-<?php get_template_part('cta', 'footer'); ?>
+<?php get_template_part('parts/cta', 'footer'); ?>
 
 <?php get_footer(); ?>
