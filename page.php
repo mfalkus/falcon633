@@ -8,12 +8,9 @@
 get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-<div class="section-header">
+<?php falcon_section_header_open() ?>
     <h1><?php the_title(); ?></h1>
-    <div class="indent-bg">
-        <div class="indent-fg indent-fg--white"></div>
-    </div>
-</div>
+<?php falcon_section_header_close() ?>
 
 <div class="content-wrapper">
     <div class="content-prep">

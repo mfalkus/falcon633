@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <?php if (!is_single()) { ?>
-<header class="section-header">
+<?php falcon_section_header_open() ?>
     <?php if (is_category()) { ?>
         <h1><?php echo single_cat_title() ?></h1>
     <?php } else if (is_tag()) { ?>
@@ -16,18 +16,17 @@ get_header(); ?>
     <?php } else { ?>
         <h1>Blog</h1>
     <?php } ?>
-    <div class="indent-bg">
-        <div class="indent-fg indent-fg--white"></div>
-    </div>
-</header>
+<?php falcon_section_header_close() ?>
 <?php } else { ?>
 <header class="section-header section-header--post">
+    <div class="section-header-inner">
     <?php if ( 'post' === get_post_type() ) { ?>
-        <h4 class="subtitle"><?php falcon_posted_on(); ?></h4>
+        <h5 class="subtitle"><?php falcon_posted_on(); ?></h5>
         <h1 class="title"><?php the_title() ?></h1>
     <?php } else { ?>
         <h1><?php the_title() ?></h1>
     <?php } ?>
+    </div>
     <div class="indent-bg">
         <div class="indent-fg indent-fg--white"></div>
     </div>

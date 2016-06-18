@@ -447,37 +447,29 @@ $indent-size: 3vw;
 \*------------------------------------*/
 .section-header {
     text-align: center;
-    h1 {
-        margin-bottom: 30px;
-        color: $green;
+    .section-header-inner {
+        // Apply padding here, not on section-header, due to indents
+        padding: 25px 0 40px;
     }
 
-    /* Use h2.title above subtitle */
-    .title {
+    h1, h2, h3, h4, h5, h6 {
         margin-bottom: 10px;
-    }
-    .subtitle, .posted-on a {
-        text-transform: uppercase;
-        font-weight: 200;
         color: #7e7e7e;
-        font-size: 16px;
-        letter-spacing: 2px;
-        // margin-bottom, padding from -inner
     }
-    .section-header-inner {
-        padding: 25px 0;
+    h1 {
+        color: $green;
+    }
+    /* h5 */ .subtitle, .posted-on a {
+        @extend .meta-titles;
+        font-weight: 200;
     }
 }
 .section-header--post {
-    padding-top: 20px;
-    .title {
+    h1 {
         color: $purple;
-        margin-bottom: 50px;
     }
     .subtitle, .posted-on * {
         color: $green;
-        margin-bottom: 10px;
-        font-weight: normal;
     }
 }
 

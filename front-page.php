@@ -7,15 +7,10 @@
 
 get_header(); ?>
 
-<div class="section-header">
-    <div class="section-header-inner">
-        <h1 class="title">Blog</h1>
-        <h4 class="subtitle">The Latest</h3>
-    </div>
-    <div class="indent-bg">
-        <div class="indent-fg indent-fg--white"></div>
-    </div>
-</div>
+<?php falcon_section_header_open() ?>
+    <h1>Blog</h1>
+    <h5 class="subtitle">The Latest</h5>
+<?php falcon_section_header_close() ?>
 
 <div class="content-wrapper">
     <div class="content-prep">

@@ -214,3 +214,20 @@ function falcon_contact_url() {
     }
     return $return_url;
 }
+
+function falcon_section_header_open() {
+?>
+<div class="section-header">
+    <div class="section-header-inner">
+<?php
+}
+
+function falcon_section_header_close() {
+?>
+    </div>
+    <div class="indent-bg">
+        <div class="indent-fg indent-fg--white"></div>
+    </div>
+</div>
+<?php
+}
