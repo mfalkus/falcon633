@@ -156,10 +156,20 @@ img {
         color: #FFF;
     }
 }
+
+// Used for the main text body of a post or page
 .content-prep {
     max-width: $max-content;
     margin: 0 auto;
     padding: 42px 2%;
+
+    h2 {
+        padding-bottom: 6px;
+        border-bottom: 1px solid $border-grey;
+    }
+    h3 {
+        color: $purple;
+    }
 }
 .top-indent.content-wrapper {
     padding-top: 50px;
