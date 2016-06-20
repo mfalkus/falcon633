@@ -13,7 +13,7 @@ get_header(); ?>
 <?php falcon_section_header_close() ?>
 
 <div class="content-wrapper">
-    <div class="content-prep">
+    <div class="content-text">
         <div class="grid">
         <div class="grid__item one-whole">
 

@@ -17,7 +17,7 @@ if($cta_text != '') {
     <div class="indent-fg indent-fg--purple"></div>
 </div>
 <div class="content-wrapper content-wrapper--highlight">
-    <div class="content-prep">
+    <div class="content-text">
         <?php echo $cta_text; ?>
     </div>
 

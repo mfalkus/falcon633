@@ -29,7 +29,7 @@ if (!is_single()) {
 falcon_section_header_close() ?>
 
 <div class="content-wrapper">
-    <div class="content-prep">
+    <div class="content-text content-text--body">
         <div class="grid grid--full">
         <div class="grid__item one-whole post-list">
 

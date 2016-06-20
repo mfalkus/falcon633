@@ -157,12 +157,14 @@ img {
     }
 }
 
-// Used for the main text body of a post or page
-.content-prep {
+// Used for all text bodies, including CTAs
+.content-text {
     max-width: $max-content;
     margin: 0 auto;
     padding: 42px 2%;
-
+}
+// Used for the main text body of a post or page
+.content-text--body {
     h2 {
         padding-bottom: 6px;
         border-bottom: 1px solid $border-grey;

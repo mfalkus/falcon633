@@ -4,7 +4,7 @@
  */
 ?>
 <footer class="footer-wrapper" role="contentinfo">
-    <div class="content-prep">
+    <div class="content-text">
         <div class="footer-top">
             <a class="falcon falcon--dark" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <?php echo site_heading_tag() ?>
