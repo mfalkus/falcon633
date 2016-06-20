@@ -216,22 +216,25 @@ function falcon_contact_url() {
 }
 
 function falcon_section_header_open($opt_class = '') {
+    echo get_falcon_section_header_open($opt_class);
+}
+
+function get_falcon_section_header_open($opt_class = '') {
     $class = 'section-header';
     if ($opt_class) {
         $class .= ' ' . $opt_class;
     }
-?>
-<div class="<?php echo $class ?>">
-    <div class="section-header-inner">
-<?php
+    return '<div class="' . $class . '">
+    <div class="section-header-inner">';
 }
 
 function falcon_section_header_close() {
-?>
-    </div>
-    <div class="indent-bg">
+    echo get_falcon_section_header_close();
+}
+
+function get_falcon_section_header_close() {
+    return '</div><div class="indent-bg">
         <div class="indent-fg indent-fg--white"></div>
     </div>
-</div>
-<?php
+    </div>';
 }
