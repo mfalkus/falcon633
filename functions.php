@@ -49,34 +49,15 @@ add_action( 'after_setup_theme', 'falcon_setup' );
  */
 function falcon_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Home Sidebar', 'falcon' ),
-        'id'            => 'home-breakout-1',
+        'name'          => esc_html__( 'Home Widget Area', 'falcon' ),
+        'id'            => 'home-widgets-1',
         'description'   => '',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => get_falcon_section_header_open(),
+        'after_title'   => get_falcon_section_header_close(),
     ) );
 
-    register_sidebar( array(
-        'name'          => esc_html__( 'Dev Posts Sidebar Left', 'falcon' ),
-        'id'            => 'dev-breakout-1',
-        'description'   => '',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
-
-    register_sidebar( array(
-        'name'          => esc_html__( 'Dev Posts Sidebar Right', 'falcon' ),
-        'id'            => 'dev-breakout-2',
-        'description'   => '',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
 }
 add_action( 'widgets_init', 'falcon_widgets_init' );
 
