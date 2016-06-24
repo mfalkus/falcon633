@@ -207,6 +207,9 @@ $indent-size: 3vw;
     position: relative;
     background: transparent;
 }
+.no-clip-path .indent-bg {
+    height: 0; // avoid weird padding when no clip-path support
+}
 .indent-fg {
     position: absolute;
     bottom: -1px; // FIX for white border issue, web kit 06 2016

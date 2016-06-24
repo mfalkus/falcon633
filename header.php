@@ -17,6 +17,7 @@
 
 <body <?php body_class(); ?>>
 <?php falcon_indent_svg(); ?>
+<?php get_template_part('parts/clip-path', 'check-js'); ?>
 
 <div class="total-wrapper">
 	<header id="header" class="header-wrapper">
