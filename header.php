@@ -16,7 +16,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php falcon_indent_svg(); ?>
 
 <div class="total-wrapper">
 	<header id="header" class="header-wrapper">
@@ -57,8 +56,8 @@
             ) ); ?>
         </div>
 
-    <div class="indent-bg indent-bg--point indent-point"></div>
+    <div class="indent-background indent-background--header"></div>
 
     </header>
-    <div class="header-push indent-fg--grey"></div>
+    <div class="header-push"></div>
 

@@ -50,9 +50,7 @@ falcon_section_header_close() ?>
         </div>
     </div>
 
-    <div class="indent-bg">
-        <div class="indent-fg indent-fg--grey"></div>
-    </div>
+    <div class="indent-background indent-background--grey"></div>
 </div>
 
 <?php get_footer(); ?>

@@ -21,6 +21,7 @@ Tags:
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono);
 @import "css/vars";
 @import "css/inuit.css/inuit";
+@import "css/indents";
 
 /*------------------------------------*\
     GENERAL
@@ -194,46 +195,19 @@ img {
 /*------------------------------------*\
     INDENTS
 \*------------------------------------*/
+/*
+ * See css/_indents.scss for SVG data uri backgrounds
+ */
 
 /*
  * 'vw' units are proportional to the width of the page:
  * https://developer.mozilla.org/en-US/docs/Web/CSS/length
  * http://caniuse.com/#feat=viewport-units
  */
-$indent-size: 3vw;
-.indent-bg {
-    height: 30px;
-    height: $indent-size;
-    position: relative;
-    background: transparent;
-}
-.indent-fg {
-    position: absolute;
-    bottom: -1px; // FIX for white border issue, web kit 06 2016
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-.indent-fg--grey {
-    background: $bg-grey;
-}
-.indent-fg--purple {
-    background: $purple;
-}
-.indent-fg--white {
-    background: #FFF;
-}
-.indent-bg--point {
-    background: $green;
-}
-
-.svg-clip {
-    height: 0;
-    width: 0;
-    float: left; // FF not respecting h/w without this
-}
-.white-wash {
-    background: #FFF;
+.indent-background {
+    height: 3.5vw;
+    background-position: 50% 0%;
+    background-size: 100% 100%;
 }
 
 
@@ -592,13 +566,12 @@ a img.aligncenter {
     }
 
     &::after {
+        @extend .indent-background;
+        @extend .indent-background--caption;
         content: ' ';
-        background: $purple;
         width: 100%;
         display: block;
         height: 15px;
-        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
-        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
     }
 }
 
@@ -732,3 +705,4 @@ blockquote {
         }
     }
 }
+
