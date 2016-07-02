@@ -22,5 +22,5 @@ if($cta_text != '') {
     <div class="indent-background indent-background--grey"></div>
 </div>
 <?php } else { ?>
-<div class="indent-background indent-background--grey"></div>
+<div class="indent-background indent-background--footer-top"></div>
 <?php } ?>

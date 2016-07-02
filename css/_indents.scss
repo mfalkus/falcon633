@@ -19,3 +19,7 @@
 .indent-background--grey {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJsYXllcjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAzMDAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPiA8cGF0aCBmaWxsPSIjZWVlZWVlIiBkPSJNMTUwMCAwIEwwIDEwMCBMMzAwMCAxMDAgWiI+PC9wYXRoPiA8L3N2Zz4=');
 }
+.indent-background--footer-top {
+    background-color: #FFF;
+    @extend .indent-background--grey;
+}
