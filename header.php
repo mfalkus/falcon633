@@ -11,6 +11,10 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/favicon.ico"  />
+    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory') ?>/favicon-152.png" />
+
+    <meta name="msapplication-TileColor" content="#0eaf87" />
+    <meta name="msapplication-TileImage" content="<?php bloginfo('template_directory') ?>/favicon-144.png" />
 
 <?php wp_head(); ?>
 </head>
