@@ -116,6 +116,10 @@ img {
     * {
         color: #FFF;
     }
+    a:hover {
+        color: #FFF;
+        border-color: #FFF;
+    }
 }
 
 // Used for all text bodies, including CTAs
@@ -412,6 +416,7 @@ img {
 /*------------------------------------*\
     BUTTONS
 \*------------------------------------*/
+a.btn,
 .btn {
     border: 1px $green solid;
     color: $green;
@@ -702,7 +707,6 @@ blockquote {
 \*------------------------------------*/
 .split-code {
     border: 1px $border-grey solid;
-    border-width: 1px 0 1px;
     td {
         width: 50%;
         vertical-align: top;
