@@ -96,21 +96,48 @@ function falcon_posted_on() {
     echo '<span class="posted-on">' . $posted_on . '</span>';
 }
 
+/**
+ * Pagination
+ */
+
+// We need just a little more control of the next/prev links to keep things neat,
+// so we add a class to each respectively
+add_filter('next_posts_link_attributes', function($e) { return 'class="next-link"'; });
+add_filter('previous_posts_link_attributes', function($e) { return 'class="prev-link"'; });
+
+// Return pagination for theme archive pages
 function falcon_pagination() {
     global $wp_query;
 
-    $big = 999999999; // need an unlikely integer
+    $out = '<div class="falcon-pagination-wrapper">';
 
-    return '<div class="falcon-pagination-wrapper">'
-        . paginate_links( array(
+    // If a prev or next link isn't available we make a placeholder anchor tag.
+    // This is a coherent way for us to keep the spacing the same regardless of
+    // whether there is a prev/next link available.
+    if (get_previous_posts_link()) {
+        $out .= get_previous_posts_link('<i class="prev-arrow"></i>');
+    } else {
+        $out .= '<a class="prev-link">&nbsp;</a>';
+    }
+
+    $big = 999999999; // need an unlikely integer
+    $out .= paginate_links( array(
             'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
             'format'    => '?paged=%#%',
             'current'   => max( 1, get_query_var('paged') ),
             'total'     => $wp_query->max_num_pages,
-            'prev_text' => __('« '),
-            'next_text' => __(' »'),
-        ) )
-        . '</div>';
+            'prev_next' => false,
+    ) );
+
+    if (get_next_posts_link()) {
+        $out .= get_next_posts_link('<i class="next-arrow"></i>');
+    } else {
+        $out .= '<a class="next-link">&nbsp;</a>';
+    }
+
+    $out .= '</div>';
+
+    return $out;
 }
 
 /* Use a shorter than normal excerpt length */

@@ -22,6 +22,7 @@ Tags:
 @import "css/vars";
 @import "css/inuit.css/inuit";
 @import "css/indents";
+@import "css/pagination_arrows";
 
 /*------------------------------------*\
     GENERAL
@@ -414,19 +415,54 @@ img {
 .falcon-pagination-wrapper {
     border-top: 1px solid #dbdada;
     text-align: center;
-    margin: 25px 0;
-    padding: 25px 0 0;
+    margin: 25px 0 0;
+    padding: 40px 0 0;
     font-size: 20px;
+    a, .current {
+        vertical-align: middle;
+        padding: 10px;
+    }
     a {
         color: $fg-lighter-grey;
         font-weight: normal;
+        &:hover {
+            border: none;
+            color: $purple;
+        }
     }
     .current {
         color: $green;
         font-weight: bold;
     }
-    a, .current {
-        padding: 10px;
+    .prev-link, .next-link {
+        display: inline-block;
+        padding: 0 15px;
+    }
+    .prev-link {
+        margin: 0 40px 0 0;
+    }
+    .next-link {
+        margin: 0 0 0 40px;
+    }
+}
+.next-arrow {
+    @extend .paging-next-inactive;
+    @extend .paging-arrow;
+    &:hover {
+        @extend .paging-next-hover;
+    }
+    &:active {
+        @extend .paging-next-active;
+    }
+}
+.prev-arrow {
+    @extend .paging-prev-inactive;
+    @extend .paging-arrow;
+    &:hover {
+        @extend .paging-prev-hover;
+    }
+    &:active {
+        @extend .paging-prev-active;
     }
 }
 @media (max-width: $desk-start) {
