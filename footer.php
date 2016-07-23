@@ -45,8 +45,7 @@
 
         var mobile_trigger = document.getElementById('menu_trigger');
         mobile_trigger.addEventListener('click', function(e) {
-            var mobile_menu = document.getElementById("mobile_menu_wrapper");
-            mobile_menu.classList.toggle('on');
+            document.body.classList.toggle('menu-on');
             return false;
         });
     }

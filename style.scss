@@ -104,7 +104,7 @@ img {
         width: 100%;
     }
     .site-content {
-        padding: 0 2%;
+        padding: 0 5%;
     }
 }
 
@@ -126,7 +126,7 @@ img {
 .content-text {
     max-width: $max-content;
     margin: 0 auto;
-    padding: 42px 2%;
+    padding: 42px 5%;
 }
 .content-text--narrow {
     max-width: $max-narrow-content;
@@ -307,6 +307,7 @@ img {
         margin: 14px 0;
         a {
             color: #FFF;
+            padding: 12px;
             &:hover {
                 border-color: #FFF;
             }
@@ -333,7 +334,7 @@ img {
 
 .menu-wrapper {
     background: $green;
-    padding: 0 2%;
+    padding: 0 5%;
 }
 .desktop-menu-wrapper {
     text-align: center;
@@ -346,13 +347,22 @@ img {
     max-height: 0;
     overflow: hidden;
     @include vendor(transition, max-height 0.5s);
-    &.on {
+}
+.menu-on {
+    .mobile-nav-wrapper {
         max-height: 250px;
     }
 }
 @media (max-width: $desk-start) {
     .nav--split {
         display: none;
+    }
+}
+@media (min-width: $desk-start) {
+    .menu-on {
+        .mobile-nav-wrapper {
+            max-height: 0;
+        }
     }
 }
 
@@ -366,10 +376,15 @@ img {
     border: none;
     &:hover {
         border: none;
-        color: $purple;
+        color: #FFF;
     }
     &:focus {
         outline: none;
+    }
+}
+.menu-on {
+    .mobile-trigger {
+        color: $purple;
     }
 }
 
@@ -400,14 +415,18 @@ img {
     border-top: 1px solid #dbdada;
     text-align: center;
     margin: 25px 0;
+    padding: 25px 0 0;
     font-size: 20px;
     a {
-        color: $std-grey;
+        color: $fg-lighter-grey;
         font-weight: normal;
     }
     .current {
         color: $green;
         font-weight: bold;
+    }
+    a, .current {
+        padding: 10px;
     }
 }
 @media (max-width: $desk-start) {
@@ -491,13 +510,11 @@ a.btn,
     .date-col, .post-col {
         width: 100%;
     }
-    .post-col {
-        padding-top: 25px;
-    }
     .post-splitter:not(:first-child) .grid__item {
         border-top: 0;
     }
-    .post-splitter .post-col {
+    .post-splitter .grid__item.post-col {
+        padding-top: 16px;
         border-bottom: 1px solid #dbdada;
     }
     .date {
