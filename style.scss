@@ -610,6 +610,20 @@ a img.aligncenter {
     }
 }
 
+@media (max-width: $desk-start) {
+    img.alignright,
+    img.alignleft,
+    img.aligncenter {
+        float: none;
+        width: 100%;
+        margin: 5px auto;
+    }
+    .wp-caption {
+        float: none;
+        margin: 5px auto;
+    }
+}
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
