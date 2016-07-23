@@ -128,6 +128,10 @@ img {
     margin: 0 auto;
     padding: 42px 2%;
 }
+.content-text--narrow {
+    max-width: $max-narrow-content;
+    text-align: center;
+}
 // Used for the main text body of a post or page
 .content-text--body {
     h2 {
