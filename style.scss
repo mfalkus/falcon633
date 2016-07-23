@@ -684,13 +684,13 @@ blockquote {
     display: inline-block;
     margin-bottom: $base-line-height;
     a {
+        @extend .meta-titles;
         display: inline-block;
-        padding: 1px 6px 1px 10px;
+        padding: 2px 6px 2px 10px;
         text-transform: uppercase;
-        font-weight: bold;
-        font-size: 12px;
-        background: $bg-grey;
-        color: $std-grey;
+        font-size: 10px;
+        background: $bg-light-grey;
+        color: $fg-light-grey;
 
         $link-indent: 8px;
         $link-indent-height: 35%;
