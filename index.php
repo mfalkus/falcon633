@@ -50,7 +50,13 @@ falcon_section_header_close() ?>
         </div>
     </div>
 
+<?php if ( is_active_sidebar( 'home-widgets-1' ) ) { ?>
+    <div class="indent-background indent-background--cta-top"></div>
+<?php } else { ?>
     <div class="indent-background indent-background--grey"></div>
+<?php } ?>
 </div>
+
+<?php get_template_part('parts/post', 'widgets'); ?>
 
 <?php get_footer(); ?>

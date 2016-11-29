@@ -494,6 +494,17 @@ a.btn,
     }
 }
 
+input[type="submit"] {
+    background-image: linear-gradient(to bottom, $purple 50%, $green 50%);
+    @extend .btn;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"] {
+    padding: 7px;
+    border: none;
+    background: white;
+    color: $std-grey;
+}
 
 /*------------------------------------*\
     HEADINGS
@@ -606,6 +617,10 @@ a img.aligncenter {
     max-width: 96%; /* Image does not overflow the content area */
     padding: 0 0 5px;
     text-align: center;
+
+    &.aligncenter {
+        padding-bottom: 25px;
+    }
 
     .alignnone {
         margin: 5px 20px 20px 0;
@@ -740,7 +755,8 @@ blockquote {
 .entry-content blockquote {
     width: 100%;
     max-width: 470px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -781,5 +797,17 @@ blockquote {
     td {
         width: 50%;
         vertical-align: top;
+    }
+}
+
+/* div */.theme-rss-link {
+    a {
+        &:hover {
+            text-decoration: none;
+            border: none;
+            i {
+                color: $green;
+            }
+        }
     }
 }

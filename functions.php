@@ -51,11 +51,21 @@ function falcon_widgets_init() {
     register_sidebar( array(
         'name'          => esc_html__( 'Home Widget Area', 'falcon' ),
         'id'            => 'home-widgets-1',
-        'description'   => '',
+        'description'   => 'Widget area that appears on the home page.',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => get_falcon_section_header_open(),
         'after_title'   => get_falcon_section_header_close(),
+    ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( 'Post Widget Area', 'falcon' ),
+        'id'            => 'post-widgets-1',
+        'description'   => 'Widget area that appears after every single post.',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
     ) );
 
 }
