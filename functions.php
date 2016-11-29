@@ -180,6 +180,10 @@ function falcon_contact_url() {
     $menu = get_term( $locations['mobile_contact'], 'nav_menu' );
     $menu_items = wp_get_nav_menu_items($menu->term_id);
 
+    if (!$menu_items) {
+        return get_bloginfo('url');
+    }
+
     $return_url = FALSE;
     foreach ( $menu_items as $item ) {
         $return_url = $item->url;
