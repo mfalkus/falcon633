@@ -5,3 +5,4 @@
 
 # Ignore any vim swap files
 *.sw*
+tags
