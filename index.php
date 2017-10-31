@@ -43,7 +43,7 @@ falcon_section_header_close() ?>
         <?php if (!is_single()) { ?>
             <?php echo falcon_pagination() ?>
         <?php } else { ?>
-            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn">Back to posts</a>
+            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn screen-only">Back to posts</a>
         <?php } ?>
 
         </div>
