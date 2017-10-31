@@ -5,7 +5,7 @@
  * @package Falcon633
  */
 if ( is_active_sidebar( 'post-widgets-1' ) ) : ?>
-    <div class="content-wrapper content-wrapper--highlight">
+    <div class="content-wrapper content-wrapper--highlight post-widgets-1-wrapper">
         <div class="content-text content-text--narrow">
         <?php dynamic_sidebar( 'post-widgets-1' ); ?>
 
