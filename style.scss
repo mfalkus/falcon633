@@ -87,6 +87,22 @@ img {
     font-weight: 200;
 }
 
+
+/*------------------------------------*\
+    UTILITY
+\*------------------------------------*/
+@media print {
+    .screen-only {
+        display: none;
+    }
+}
+
+@media screen {
+    .print-only {
+        display: none;
+    }
+}
+
 /*------------------------------------*\
     CONTAINERS
 \*------------------------------------*/
@@ -175,6 +191,11 @@ img {
     background-position: 50% 0%;
     background-size: 100% 100%;
 }
+@media print {
+    .indent-background {
+        display: none;
+    }
+}
 
 
 /*------------------------------------*\
@@ -248,6 +269,9 @@ img {
 .admin-bar .header-wrapper {
     top: 32px;
 }
+.print-header {
+    text-align: center;
+}
 
 .footer-wrapper {
     text-align: center;
@@ -267,6 +291,11 @@ img {
         margin-bottom: 10px;
     }
 }
+@media print {
+    .footer-top {
+        margin-bottom: 0;
+    }
+}
 
 .header-push {
     height: 125px;
@@ -274,6 +303,11 @@ img {
 @media (max-width: $desk-start) {
     .header-push {
         height: 75px;
+    }
+}
+@media print {
+    .header-push {
+        display: none;
     }
 }
 

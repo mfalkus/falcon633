@@ -11,7 +11,7 @@
             </a>
 
             <?php wp_nav_menu( array(
-                'container_class'   => 'menu-header',
+                'container_class'   => 'menu-header screen-only',
                 'menu_class'        => 'nav nav--main nav--footer',
                 'theme_location'    => 'footer_nav'
             ) ); ?>

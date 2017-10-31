@@ -22,7 +22,12 @@
 <body <?php body_class(); ?>>
 
 <div class="total-wrapper">
-	<header id="header" class="header-wrapper">
+    <div class="print-header print-only">
+        <a class="falcon falcon--primary" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <?php echo site_heading_tag() ?>
+        </a>
+    </div>
+    <header id="header" class="header-wrapper screen-only">
         <div class="grid menu-wrapper">
         <div class="grid__item mobile-trigger-wrapper">
             <a id="menu_trigger" href="#menu" class="mobile-menu-item mobile-trigger">
