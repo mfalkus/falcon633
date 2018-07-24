@@ -668,6 +668,15 @@ a img.aligncenter {
         margin: 5px 0 20px 20px;
     }
 
+    // Close up gap with figcaption
+    a {
+        font-size: 0;
+        display: block;
+        &:hover {
+            border-bottom: 0;
+        }
+    }
+
     img {
         border: 0 none;
         height: auto;
@@ -691,7 +700,7 @@ a img.aligncenter {
         content: ' ';
         width: 100%;
         display: block;
-        height: 15px;
+        height: 20px;
     }
 }
 
